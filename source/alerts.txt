@@ -14,7 +14,7 @@ Activity Feed & {+service-short+} Alerts
 
 Introduction
 ------------
-{+atlas+} provides an Activity Feed that displays events for each 
+{+atlas+} provides an Activity Feed thaat displays events for each 
 :atlas:`project </organizations-projects/#std-label-projects>`. {+service-short+} 
 activities are included in this feed. To view and/or download only 
 {+service-short+} events, you can specify a filter, as described below.
