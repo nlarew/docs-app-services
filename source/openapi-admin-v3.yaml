@@ -645,7 +645,7 @@ paths:
                     sample population. Use this to narrow the sample to a subset of documents in the
                     collection.
                 limit:
-                  type: number
+                   type: number
                   default: 10000
                   description: The maximum number of documents to sample.
                 sort:
