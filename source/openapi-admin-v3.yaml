@@ -668,7 +668,7 @@ paths:
                       type: object
                       properties:
                         error_code:
-                          "$ref": "#/components/schemas/ValidationError"
+                          "$ref": "#/schemas/ValidationError"
                           description: The type of the schema validation error.
                         error_count:
                          type: number
