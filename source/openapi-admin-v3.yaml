@@ -1,6 +1,10 @@
 ---
 openapi: 3.1.0
+foo:
+  notallowed: true
 info:
+  bar:
+    haha: yes
   description: |-
     App Services provides an API for programmatically performing
     administrative tasks outside of the App Services UI. This includes tasks such
