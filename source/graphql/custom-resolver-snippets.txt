@@ -1,0 +1,81 @@
+Set a nested field in an object or update an element in an array
+
+
+Aggregation
+
+
+Manual Relationships
+
+
+Pagination
+
+- Can do this for any list, e.g. a plural query (or a computed property?)
+- ADVANCED: Cursors
+  - friends {
+      edges {
+        cursor
+        node {
+          name
+        }
+      }
+    }
+
+```graphql
+{
+  hero {
+    name
+    friends(first: 2) {
+      totalCount
+      edges {
+        node {
+          name
+        }
+        cursor
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}
+```
+
+1. Create an EJSON schema
+2. Create a custom resolver
+   - Input: {
+    offset?: number  // skip
+    first?: number   // limit
+    after?: ObjectId // { _id: { $gt: ObjectId("62f111f54642c5d41d637db1") } }
+   }
+   - Payload: {
+     totalCount: number
+     edges: {
+       node: T
+       cursor: ObjectId
+     }
+     pageInfo {
+       endCursor
+       hasNextPage
+     }
+   }
+3. 
+
+```javascript
+exports = function connection({
+  database,
+  collection,
+  query,
+  offset,
+  first,
+  after,
+}) {
+  const mdb = context.services.get("mongodb-atlas");
+  
+  const cursor = mdb
+    .db(database)
+    .collection(collection)
+    .find(query);
+  
+}
+```
