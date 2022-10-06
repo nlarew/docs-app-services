@@ -1,6 +1,10 @@
-==========================
-{+sync+} Overview
-==========================
+:template: product-landing
+:hidefeedback: header
+:noprevnext:
+
+=========================
+What is Atlas Device Sync
+=========================
 
 .. default-domain:: mongodb
 
@@ -17,12 +21,27 @@
    Sync Production Load Testing </sync/production-load-testing>
    Event Library </sync/event-library>
 
-Want to learn more about {+sync+}? See: :ref:`{+sync+} Overview <sync-overview>`.
+.. default-domain:: mongodb
 
-- :doc:`What is {+sync+}? </sync/learn>`
-- :doc:`Configure and Update Your Data Model </sync/configure-your-data-model>`
-- :doc:`Define Data Access Patterns </sync/data-access-patterns>`
-- :doc:`Configure Sync </sync/configure-device-sync>`
-- :doc:`Handle Errors </sync/error-handling>`
-- :doc:`Add Sync to a Local-Only App </sync/local-to-sync>`
-- :doc:`Sync Production Load Testing </sync/production-load-testing>`
+.. introduction::
+   
+   Atlas Application Services are fully-managed backend services and APIs
+   that help you build apps, integrate services, and connect to your Atlas
+   data faster.
+   
+   Get started now by building on our :doc:`free tier </billing>`.
+   
+   .. button:: Start Building
+      :uri: https://www.mongodb.com/realm/register?tck=docs_CTA_app_services
+
+.. video:: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+.. kicker:: What You Can Do
+
+Build Data-Driven Apps And Services
+-----------------------------------
+
+Services like Device Sync, APIs, and Triggers make it easy to build and
+run virtually any app or backend service on top of Atlas.
+
+TODO

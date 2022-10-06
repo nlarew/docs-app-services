@@ -2,8 +2,6 @@
 :hidefeedback: header
 :noprevnext:
 
-.. _realm-cloud:
-
 =========================
 What is Atlas Device Sync
 =========================
