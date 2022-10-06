@@ -1,0 +1,24 @@
+:template: product-landing
+:hidefeedback: header
+:noprevnext:
+
+.. _realm-cloud:
+
+=========================
+What is Atlas Device Sync
+=========================
+
+.. default-domain:: mongodb
+
+.. introduction::
+   
+   Atlas Application Services are fully-managed backend services and APIs
+   that help you build apps, integrate services, and connect to your Atlas
+   data faster.
+   
+   Get started now by building on our :doc:`free tier </billing>`.
+   
+   .. button:: Start Building
+      :uri: https://www.mongodb.com/realm/register?tck=docs_CTA_app_services
+
+.. video:: https://www.youtube.com/watch?v=dQw4w9WgXcQ

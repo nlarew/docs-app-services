@@ -8,6 +8,7 @@ Learn About {+sync+}
    :titlesonly:
    :hidden:
    
+   {+sync+} </sync/landing>
    {+sync+} Overview </sync/learn/overview>
    Conflict Resolution </sync/learn/conflict-resolution>
    {+sync+} Protocol </sync/learn/protocol>
