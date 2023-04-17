@@ -6,7 +6,7 @@ post:
     - lang: 'cURL'
       label: 'cURL'
       source:
-        $ref: "../../source/data-api/snippets/generated-endpoints.snippet.insertOne.sh"
+        $ref: "../../data-api/snippets/generated-endpoints.snippet.insertOne.sh"
   requestBody:
     content:
       application/json:
