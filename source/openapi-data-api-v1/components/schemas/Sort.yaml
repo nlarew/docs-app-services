@@ -1,0 +1,7 @@
+type: object
+properties:
+  sort:
+    type: object
+    description: >-
+      A MongoDB sort expression that indicates sorted field names and
+      directions.

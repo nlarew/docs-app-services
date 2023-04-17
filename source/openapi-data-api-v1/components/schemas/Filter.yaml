@@ -1,0 +1,5 @@
+type: object
+properties:
+  filter:
+    type: object
+    description: A MongoDB query filter that matches documents.

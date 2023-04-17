@@ -1,0 +1,105 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: MongoDB Atlas Data API
+  description: An API to read, write, and aggregate data in MongoDB Atlas
+security:
+  - AccessToken: []
+  - Email: []
+    Password: []
+  - ApiKey: []
+  - CustomJwt: []
+servers:
+  - description: Data API Base URL
+    url: https://{region}.mongodb-api.com/app/{appId}/endpoint/data/v1
+    variables:
+      appId:
+        default: your-app-id
+      region:
+        default: data
+        enum:
+          - data
+          - us-east-1.aws.data
+          - us-west-2.aws.data
+          - us-east-2.aws.data
+          - eu-central-1.aws.data
+          - eu-west-1.aws.data
+          - eu-west-2.aws.data
+          - ap-southeast-1.aws.data
+          - ap-southeast-2.aws.data
+          - ap-south-1.aws.data
+          - sa-east-1.aws.data
+          - eastus2.azure.data
+          - westus.azure.data
+          - westeurope.azure.data
+          - eastasia.azure.data
+          - southeastasia.azure.data
+          - us-central1.gcp.data
+          - us-east4.gcp.data
+          - us-west1.gcp.data
+          - europe-west1.gcp.data
+          - asia-south1.gcp.data
+paths:
+  /action/findOne:
+    $ref: paths/action_findOne.yaml
+  /action/find:
+    $ref: paths/action_find.yaml
+  /action/insertOne:
+    $ref: paths/action_insertOne.yaml
+  /action/insertMany:
+    $ref: paths/action_insertMany.yaml
+  /action/updateOne:
+    $ref: paths/action_updateOne.yaml
+  /action/updateMany:
+    $ref: paths/action_updateMany.yaml
+  /action/deleteOne:
+    $ref: paths/action_deleteOne.yaml
+  /action/deleteMany:
+    $ref: paths/action_deleteMany.yaml
+  /action/aggregate:
+    $ref: paths/action_aggregate.yaml
+components:
+  securitySchemes:
+    AccessToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: |-
+        A [user access token](https://www.mongodb.com/docs/atlas/app-services/users/sessions/)
+        specified as a Bearer token in the Authorization header.
+
+        **Example:** `Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`
+    Email:
+      type: apiKey
+      in: header
+      name: email
+      description: |-
+        A registered email/password user's email address. Must be used
+        in conjunction with the ``password`` header.
+
+        **Example:** `email: someone@example.com`
+    Password:
+      type: apiKey
+      in: header
+      name: password
+      description: |-
+        A registered email/password user's password. Must be used in
+        conjunction with the ``email`` header.
+
+        **Example:** `password: Pa55w0rd!`
+    ApiKey:
+      type: apiKey
+      in: header
+      name: apiKey
+      description: >-
+        A server or user API key.
+
+        **Example:** `apiKey: A1g70fN7oKMNCnDRNeyou20Wd24rD6QNmXWYMPwz0SnDRQRQSYwGPdC3y44aJN3H`
+    CustomJwt:
+      type: apiKey
+      in: header
+      name: jwtTokenString
+      description: >-
+        A custom JSON web token string that the App is configured to support.
+
+        **Example:** `jwtTokenString: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJteWFwcC1hYmNkZSIsInN1YiI6IjY0MzZlMDZiZGU1YzQ2ZGQ5MTQwZWFlOSIsIm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTUxNjIzOTAyMn0.Y_6JR4ocrqoCEY3yOZlEqhxtAsSpvlzrXc9uvTSJA0k`

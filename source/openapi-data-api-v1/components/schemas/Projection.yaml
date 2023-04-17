@@ -1,0 +1,10 @@
+type: object
+properties:
+  projection:
+    type: object
+    additionalProperties:
+      type: number
+      enum:
+        - 0
+        - 1
+    description: A MongoDB projection for matched documents returned by the operation.

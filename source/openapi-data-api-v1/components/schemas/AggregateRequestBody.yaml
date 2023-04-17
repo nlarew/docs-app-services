@@ -1,0 +1,12 @@
+title: AggregateRequestBody
+required:
+  - pipeline
+allOf:
+  - $ref: ./Namespace.yaml
+  - properties:
+      pipeline:
+        type: array
+        description: An array of aggregation stages.
+        items:
+          type: object
+          description: An aggregation stage.

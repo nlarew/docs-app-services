@@ -1,0 +1,15 @@
+type: object
+required:
+  - dataSource
+  - database
+  - collection
+properties:
+  dataSource:
+    type: string
+    description: The name of a linked MongoDB Atlas data source.
+  database:
+    type: string
+    description: The name of a database in the specified data source.
+  collection:
+    type: string
+    description: The name of a collection in the specified database.

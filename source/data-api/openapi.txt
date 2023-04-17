@@ -2,4 +2,4 @@
 :template: openapi
 :title: Atlas App Services Data API
 
-.. openapi:: /openapi-data-api-v1.yaml
+.. openapi:: /openapi-data-api-v1/openapi.yaml
