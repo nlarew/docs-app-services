@@ -7,5 +7,6 @@ apis:
   data@v1:
     root: ./source/openapi-data-api-v1/bundled.yaml
     rules:
-      info-license: off
+      # info-license: off
+      info-license: warn
       operation-4xx-response: error
