@@ -9,3 +9,11 @@ apis:
     rules:
       info-license: off
       operation-4xx-response: error
+    features.openapi:
+      generateCodeSamples:
+        languages:
+          - lang: curl
+            label: Custom label
+          - lang: Python
+          - lang: JavaScript
+      hideRequestPayloadSample: false
